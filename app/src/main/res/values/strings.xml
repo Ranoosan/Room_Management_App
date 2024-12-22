@@ -1,0 +1,40 @@
+<resources>
+    <!-- Application Name -->
+    <string name="app_name">My Application</string>
+
+    <!-- Prompts for Spinners -->
+    <string name="room_type_prompt">Select Room Type</string>
+    <string name="availability_prompt">Select Availability</string>
+    <string name="price_range_prompt">Select Price Range</string>
+
+    <!-- Room Types -->
+    <string-array name="room_types">
+        <item>All</item>
+        <item>Deluxe Suite</item>
+        <item>Family Room</item>
+        <item>Single Room</item>
+        <item>Double Room</item>
+        <item>Presidential Suite</item>
+        <item>Budget Room</item>
+        <item>King Room</item>
+        <item>Queen Room</item>
+        <item>Executive Suite</item>
+        <item>Penthouse</item>
+    </string-array>
+
+    <!-- Availability Options -->
+    <string-array name="availability_options">
+        <item>All</item>
+        <item>Available</item>
+        <item>Unavailable</item>
+    </string-array>
+
+    <!-- Price Ranges -->
+    <string-array name="price_ranges">
+        <item>All</item>
+        <item>$0 - $100</item>
+        <item>$101 - $200</item>
+        <item>$201 - $500</item>
+        <item>Above $500</item>
+    </string-array>
+</resources>

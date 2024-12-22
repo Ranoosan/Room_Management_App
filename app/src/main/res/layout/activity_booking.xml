@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <!-- Filters Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Display Selected Filters -->
+        <TextView
+            android:id="@+id/filterSelectionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Filters"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Spinners for Filters -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!-- Spinner for Room Type -->
+            <Spinner
+                android:id="@+id/filterRoomTypeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/room_types"
+                android:prompt="@string/room_type_prompt"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Spinner for Availability -->
+            <Spinner
+                android:id="@+id/filterAvailabilitySpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/availability_options"
+                android:prompt="@string/availability_prompt"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Spinner for Price Range -->
+            <Spinner
+                android:id="@+id/filterPriceRangeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/price_ranges"
+                android:prompt="@string/price_range_prompt" />
+        </LinearLayout>
+
+        <!-- OK Button to Apply Filters -->
+        <Button
+            android:id="@+id/filterOkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:text="Apply Filters" />
+    </LinearLayout>
+
+    <!-- List of Filtered Rooms -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/roomsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+
+    <!-- Confirm Booking Button -->
+    <Button
+        android:id="@+id/confirmBookingButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Booking"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@android:color/white" />
+</LinearLayout>

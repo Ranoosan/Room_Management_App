@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title for the Feedback Page -->
+    <TextView
+        android:id="@+id/feedbackTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback Page"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <!-- Input Field for Feedback -->
+    <EditText
+        android:id="@+id/feedbackInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write your feedback here..."
+        android:contentDescription="Input field for feedback"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:lines="4"
+        android:padding="8dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:contentDescription="Submit feedback button"
+        android:layout_gravity="end"
+        android:layout_marginTop="8dp" />
+
+    <!-- Message when no feedback is available -->
+    <TextView
+        android:id="@+id/emptyFeedbackMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No feedback available yet."
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="16dp" />
+
+    <!-- RecyclerView to Display Feedback -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feedbackRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="List of feedback" />
+</LinearLayout>
